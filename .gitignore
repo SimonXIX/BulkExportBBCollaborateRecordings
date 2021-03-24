@@ -6,3 +6,6 @@ Config.py
 
 #reports
 /reports/*
+
+#testing area
+/test_documents

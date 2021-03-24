@@ -15,11 +15,11 @@ credenciales = {
     "learn_rest_secret" : "Learn API Secret",
     "collab_key": "Collab Key",
     "collab_secret": "Collab Secret",
-    "collab_base_url": "us.bbcollab.com/collab/api/csa"
+    "collab_base_url": "us.bbcollab.com/collab/api/csa",
     "ppto_server" : "panoptoServer",
     "ppto_folder_id" : "panoptoFolderId", 
     "ppto_client_id" : "panoptoClientId",
     "ppto_client_secret" : "panoptoClientSecret",
     "ppto_username" : "panoptoUserName",
-    "ppto_password" : "panoptoPassword",
+    "ppto_password" : "panoptoPassword"
 }
