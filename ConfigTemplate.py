@@ -6,7 +6,9 @@ They need to go to developer.blackboard.com and register from there to grab the 
 Now, for Collaborate production they CAN and MUST create a ticket on behind the blackboard requesting their credentials.
 '''
 
-
+'''
+Copy this file to a new file called Config.py. Do not put active API credentials in a file tracked by git!
+'''
 
 credenciales = {
     "verify_certs" : "True",
