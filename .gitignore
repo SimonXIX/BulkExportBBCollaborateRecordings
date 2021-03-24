@@ -1,0 +1,8 @@
+# active config file
+Config.py
+
+#downloads
+/downloads/*
+
+#reports
+/reports/*
