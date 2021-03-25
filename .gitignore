@@ -9,3 +9,6 @@ Config.py
 
 #testing area
 /test_documents
+
+#cache
+/__pycache__
