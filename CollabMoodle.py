@@ -1,6 +1,7 @@
 import datetime
 from webService import WebService
 import Utilidades as ut
+import PanoptoUpload as panup
 import sys
 
 
@@ -28,6 +29,7 @@ if __name__ == "__main__":
                     for grabacion in lista_grabaciones:
                         report.append([grabacion['recording_id'], grabacion['recording_name'],grabacion['duration'],grabacion['storageSize'],grabacion['created']])
                     ut.downloadrecording(lista_grabaciones,nombre_session,nombre_session)
+                    panup.uploadrecording(lista_grabaciones,nombre_session)
         if len(report) > 0: 
          print(ut.crearReporteMoodle(report))
         else:
