@@ -77,6 +77,28 @@ In order to get the Learn credentials, go to <i>developer.blackboard.com</i> and
 
 Now, for Collaborate production they CAN and MUST create a ticket on behind the blackboard requesting their credentials.
 
+## Panopto credentials
+
+You need Panopto user account who can create a video on Panopto system. If you don't have it, ask your organization's Panopto administrator.
+
+### Setup API Client on Panopto server
+1. Sign in to Panopto web site
+2. Click your name in right-upper corner, and click "User Settings"
+3. Select "API Clients" tab
+4. Click "Create new API Client" button
+5. Enter arbitrary Client Name
+6. Select User Based Server Application type.
+7. Enter https://localhost into CORS Origin URL.
+8. Enter http://localhost:9127/redirect into Redirect URL.
+9. The rest can be blank. Click "Create API Client" button.
+10. Note the created Client ID and Client Secret.
+
+### Determine the target folder ID
+1. Navigate to the target folder on Panopto web site
+2. Click gear icon at the top-right corner.
+3. Select Manage tab
+4. Find Folder ID and note it.
+
 ## 4. Modify external file depending on scenario
 ```
 edit learn_courses.txt file
