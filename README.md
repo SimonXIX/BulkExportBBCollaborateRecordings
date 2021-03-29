@@ -1,5 +1,10 @@
-# PyCollab
+# Sources
 
+Adapted from https://github.com/zerausolrac/PyCollab licensed as MIT License
+
+Adapted from https://github.com/OSCELOT/Collab-Panopto licensed as Blackboard Open Source License
+
+# PyCollab
 
 Python Blackboard Collaborate script to download recording based on Blackboard Learn Course ID, or Blackboard Learn Course UUID, Moodle plugin session ID, Moodle LTI Tool.
 and get:
@@ -14,10 +19,7 @@ and get:
 <li><b>This script is NOT supported on Behind the Blackboard.</b></li>
 </ul>
 
-
-
-
-## 1. Python Instalation 
+## Python Instalation 
 You need to have installed from Python 3.7 to Python 3.8.6 
 
 Will depent on Computer operation system how Python is referenced on command line tool:
@@ -35,7 +37,7 @@ Windows OS:
 <br>
 <br>
 
-## 2. Install script requirements
+## Install script requirements
 
 MacOS:
 
@@ -50,7 +52,7 @@ Windows:
 python -m pip install -r requerimientos.txt
 ```
 
-## 3. Add Blackboard Collaborate and Learn Credentials
+## Add Blackboard Collaborate and Learn Credentials
 <ul>
 <li>Scenario 1:  Learn to Collaborate search for recordings</li>
 <li>Scenario 2: Moodle to Collaborate search for recordings</li>
@@ -66,7 +68,6 @@ If you have the scenario 2 or scenario 3, yo only need to insert Collaborate cre
 ```
 edit content of Config.py file
 ```
-
 
 ### Note: Backboard Credentials / Integration on Learn
 
@@ -99,7 +100,8 @@ You need Panopto user account who can create a video on Panopto system. If you d
 3. Select Manage tab
 4. Find Folder ID and note it.
 
-## 4. Modify external file depending on scenario
+## Modify external file depending on scenario
+
 ```
 edit learn_courses.txt file
 edit learn_uuids.txt file
@@ -111,8 +113,7 @@ downlaod the Collaborate Admin Institutional Attendance Report and put on the ro
 downlaod Collaborate Admin Institutional Recordings Report and put on the root directoriy
 ```
 
-
-## 5. Run the script
+## Run the script
 
 <ul>
 <li>Collab.py -h</li>
@@ -154,7 +155,6 @@ If you need to know about recording storage size, duration and  recording ID bef
 python3 CollabReport.py -f learn_courses.txt -w 10
 ```
 
-
 ## Scenario 2
 ### Search recording from Moodle to Collaborate  
 
@@ -173,7 +173,6 @@ if you have the Moodle courses ID(s) related to Moodle LTI Tool as input data on
 ```
 python3 CollabMoodle.py -l moodle_lti_id.txt -w 10   
 ```
-
 
 ## Scenario 3
 ### Collaborate Admin Institutional Reports 
@@ -213,8 +212,6 @@ python3 CollabRecordingsDownload.py -f RecordingsReport.csv
 ```
 <br>
 <br>
-
-
 
 ## Delete recordings
 ### Considerations

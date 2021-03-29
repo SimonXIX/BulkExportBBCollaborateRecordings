@@ -29,10 +29,10 @@ import argparse
 import ntpath # so we can grab the basename off the end of the full-file-path.
 from panopto_oauth2 import PanoptoOAuth2
 from panopto_uploader import PanoptoUploader
-# from video_link_creator import VideoLinkCreator
 from upload_and_create_link import UploadAndCreateLink
 import time
 import urllib3
+import Utilidades as ut
 
 # Import Config
 import Config
@@ -42,39 +42,8 @@ import Config
 
 def uploadrecording(recording_list, name):
     for recording in recording_list:
-        # recording_data = collab_service.get_recording_data(recording['recording_id'])
-        # print(str(recording_data))
-        # print('**** Downloading recording with id ****' + recording['recording_id'])
-        filename = name + ' - ' + recording['recording_name'].replace(':', ' ').replace('/', ' ').replace('”', '').replace('“', '').replace(',', '').replace('?', '') + '.mp4'
+        filename = name + '-' + recording['recording_id'] + '-' + ut.checkLongFilenameVideo(' ', recording['recording_name'])
         fullpath = './downloads/'
         print(fullpath + filename)
-        # urllib.request.urlretrieve(recording_data['extStreams'][0]['streamUrl'], fullpath + filename)
         upload_creator = UploadAndCreateLink()
         upload_creator.upload_and_create_link(fullpath + filename)
-
-
-# if __name__ == "__main__":
-    # collab_service = Collab()
-    
-    # course_uuids = [ 
-        # '412e921ca89e4e069e1228a5f56d12d6',
-        # 'e3b0eab0374f431fb5e88abdccccff44',
-        # '98025492016241b4a6162616e3f29bbe',
-        # '5c02be9bfc6d4234a19513a80ae29867',
-        # '60e296ce62984c4194fecf8c3aa9bda5'
-    # ]
-
-    # start_time = datetime.datetime.now() - datetime.timedelta(hours = 24)
-    # start_time = start_time.strftime('%Y-%m-%dT%H:%M:%SZ')
-    # print(start_time)
-
-    # for course_uuid in course_uuids:
-        # print("uuid: " + course_uuid)
-        # course_name = collab_service.getCourseName(course_uuid)
-        # print("name: " + str(course_name))
-        # sessions_json = collab_service.get_recordings(course_uuid, start_time)
-        # recording_list= listrecordings(sessions_json)
-        # if recording_list is None:
-            # print("No recordings available for course: " + course_name)
-        # else:
-            # downloadrecording(recording_list, course_name, course_uuid)

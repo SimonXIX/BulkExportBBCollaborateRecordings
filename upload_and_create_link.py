@@ -14,7 +14,6 @@ import ntpath # so we can grab the basename off the end of the full-file-path.
 import os
 from panopto_oauth2 import PanoptoOAuth2
 from panopto_uploader import PanoptoUploader
-# from video_link_creator import VideoLinkCreator
 import time
 import urllib3
 import Config
@@ -31,19 +30,15 @@ class UploadAndCreateLink:
         self.ppto_username = Config.credenciales['ppto_username']
         self.ppto_password = Config.credenciales['ppto_password']      
 
-    #def upload_and_create_link(self, full_file_path, course_uuid):
     def upload_and_create_link(self, full_file_path):
         print("current date and time is..")
         localtime = time.asctime(time.localtime(time.time()))
         print(localtime)
         print("file: " + full_file_path)
-        # print("course_uuid: " + course_uuid)
-       #  print("fcourse_uuid: " + f"uuid:{course_uuid}")
         ssl_verify = True
         basename = ntpath.basename(full_file_path)
         (course_name, ext) = os.path.splitext(basename)
 
-        # oauth2 = PanoptoOAuth2(self.ppto_server, self.ppto_client_id, self.ppto_client_secret, not args.skip_verify)
         oauth2 = PanoptoOAuth2(self.ppto_server, self.ppto_client_id, self.ppto_client_secret, ssl_verify) 
 
         uploader = PanoptoUploader(self.ppto_server, ssl_verify, oauth2, self.ppto_username, self.ppto_password)
@@ -52,14 +47,6 @@ class UploadAndCreateLink:
         print("current date and time is..")
         localtime = time.asctime(time.localtime(time.time()))
         print(localtime)
-
-        # print (f"got video link url:{video_link_url} creating link in {course_uuid} on {self.learn_rest_fqdn}")
-        
-        # link_creator = VideoLinkCreator(self.learn_rest_fqdn, self.learn_rest_key, self.learn_rest_secret, f"uuid:{course_uuid}", video_link_url, course_name, "DevCon session recording brought to you by Blackboard Collaborate and Panopto")
-        # link_creator.create_video_link()
-        # print("Link is in the course. That's all folks!")
-
-
     
 def parse_argument():
     '''

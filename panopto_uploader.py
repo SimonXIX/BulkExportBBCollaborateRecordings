@@ -238,5 +238,5 @@ class PanoptoUploader:
             if session_upload['State'] == 4: # Complete
                 break
         print(session_upload)
-        linkUrl = 'https://bbdemo.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id={0}'.format(session_upload['SessionId'])
+        linkUrl = 'https://{0}/Panopto/Pages/Viewer.aspx?id={0}'.format(session_upload['SessionId'])
         return linkUrl
