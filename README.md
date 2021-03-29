@@ -19,7 +19,7 @@ and get:
 <li><b>This script is NOT supported on Behind the Blackboard.</b></li>
 </ul>
 
-## Python Instalation 
+## Python installation 
 You need to have installed from Python 3.7 to Python 3.8.6 
 
 Will depent on Computer operation system how Python is referenced on command line tool:
@@ -58,12 +58,12 @@ python -m pip install -r requerimientos.txt
 <li>Scenario 2: Moodle to Collaborate search for recordings</li>
 <li>Scenario 3: Collab Admin Institutional Reports</li>
 </ul>
-
 <br>
 if you have the scenario 1 you need to insert both Learn and Collaborate credentials 
 <br>
 If you have the scenario 2 or scenario 3, yo only need to insert Collaborate credentials, but DO NOT REMOVE the key:value association of Learn credentials section from the Config.py file.
 <br>
+
 
 ```
 edit content of Config.py file
