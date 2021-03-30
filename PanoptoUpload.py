@@ -47,3 +47,11 @@ def uploadrecording(recording_list, name):
         print(fullpath + filename)
         upload_creator = UploadAndCreateLink()
         upload_creator.upload_and_create_link(fullpath + filename)
+
+def uploadrecordingUUID(recording_list):
+    print(recording_list)
+    filename = recording_list['recordingId'] + '-' + ut.checkLongFilenameVideo(' ', recording_list['recording_name'])
+    fullpath = './downloads/'
+    print(fullpath + filename)
+    upload_creator = UploadAndCreateLink()
+    upload_creator.upload_and_create_link(fullpath + filename)

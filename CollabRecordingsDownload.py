@@ -34,6 +34,7 @@ if __name__ == "__main__":
                     report.append(report_record)
                     recording_lista['recordingId'] = recording['recording']
                     ut.downloadRecordingsUUID(recording_lista)
+                    panup.uploadrecordingUUID(recording_lista)
         if len(report) > 0: 
                 print(ut.crearReporte(report))
         else:
