@@ -1,6 +1,7 @@
 import datetime
 from webService import WebService
 import Utilidades as ut
+import PanoptoUpload as panup
 import sys
 import csv
 import requests
