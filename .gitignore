@@ -12,3 +12,6 @@ Config.py
 
 #cache
 /__pycache__
+
+#upload manifest
+upload_manifest_generated.xml
