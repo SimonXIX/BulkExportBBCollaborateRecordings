@@ -270,7 +270,7 @@ def deleteRecording(recording_id):
 
 
 def checkLongFilenameVideo(courseId:str, fname:str):
-    filename = fname.replace(':', ' ').replace('/', ' ').replace('”', '').replace('“', '').replace(',', '').replace('?', '').replace('|', '').replace('"', '') + '.mp4'
+    filename = fname.replace(':', ' ').replace('/', ' ').replace('”', '').replace('“', '').replace(',', '').replace('?', '').replace('|', '').replace('"', '').replace('.', '').replace('&', '') + '.mp4'
     if len(filename) > 160:
         return courseId + '.mp4'
     else:
