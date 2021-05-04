@@ -42,14 +42,14 @@ import Config
 
 def uploadrecording(recording_list, name):
     for recording in recording_list:
-        filename = name + '-' + recording['recording_id'] + '-' + ut.checkLongFilenameVideo(' ', recording['recording_name'])
+        filename = name + '-' + recording['recording_id'] + '-' + ut.checkLongFilenameVideo('', recording['recording_name'])
         fullpath = './downloads/'
         print(fullpath + filename)
         upload_creator = UploadAndCreateLink()
         upload_creator.upload_and_create_link(fullpath + filename)
 
 def uploadrecordingUUID(recording_list):
-    filename = recording_list['recordingId'] + '-' + ut.checkLongFilenameVideo(' ', recording_list['recording_name'])
+    filename = recording_list['recordingId'] + '-' + ut.checkLongFilenameVideo('', recording_list['recording_name'])
     fullpath = './downloads/'
     print(fullpath + filename)
     upload_creator = UploadAndCreateLink()
